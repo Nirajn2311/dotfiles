@@ -1,0 +1,8 @@
+command_timeout = 1000
+
+[cmd_duration]
+show_notifications = true
+
+[memory_usage]
+disabled = false
+threshold = 80
