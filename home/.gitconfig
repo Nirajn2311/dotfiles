@@ -1,0 +1,72 @@
+[user]
+	name = Niraj Nandish
+	email = nirajnandish@icloud.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIAHhzeHhc6EdXak+5jeAeZd9NTQx44PhBOtutfZD1ym
+[github]
+	user = Nirajn2311
+[alias]
+	co = checkout
+	cob = checkout -b
+	cm = commit
+	cma = commit --amend
+	cman = commit --amend --no-edit
+	cl = clone
+	fu = fetch upstream
+	fum = fetch upstream main
+	pso = push origin
+	psu = push upstream
+	psom = push origin main
+	psum = push upstream main
+	psfo = push -f origin
+	psfu = push -f upstream
+	plu = pull upstream
+	plum = pull upstream main
+	plo = pull origin
+	plom = pull origin main
+	st = status
+	br = branch
+	rbi = rebase --interactive
+	rba = rebase --abort
+	rbc = rebase --continue
+	reh = reset --hard
+	res = reset --soft
+	rem = reset --mixed
+	rv = remote -v
+	logone = log --oneline --decorate --graph --all
+	fccbackup = !git st && git co backup && git merge main && git psfo backup && git co main && git st
+	fame = !python -m gitfame
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+[core]
+	whitespace = cr-at-eol
+	autocrlf = false
+	editor = code --wait
+	eol = lf
+	hooksPath = /Users/niraj/.git/hooks
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
