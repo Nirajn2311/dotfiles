@@ -1,4 +1,5 @@
-
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -85,6 +86,10 @@ source ~/.zsh-secrets
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 export NODE_ENV=development
 export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
@@ -126,6 +131,7 @@ alias fbuild="flutter pub run build_runner build --delete-conflicting-outputs"
 alias bundletool="java -jar ~/Desktop/FCC/android-tools/bundletool.jar"
 alias weather="curl wttr.in"
 alias fix-spotlight='find . -type d -name "node_modules" -exec touch "{}/.metadata_never_index" \;'
+alias pn=pnpm
 
 eval "$(op completion zsh)"
 compdef _op op
@@ -139,3 +145,10 @@ eval "$(thefuck --alias)"
 eval "$(thefuck --alias fix)" 
 eval "$(starship init zsh)"
 export VISUAL="nano"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
