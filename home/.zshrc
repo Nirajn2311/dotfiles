@@ -104,6 +104,11 @@ export PATH="/Users/niraj/Library/Android/sdk/emulator:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 
+# pnpm
+export PNPM_HOME="/Users/niraj/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
 export FLUTTER_ROOT="/Users/niraj/fvm/default"
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -153,6 +158,21 @@ export VISUAL="nano"
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/niraj/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/niraj/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/niraj/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/niraj/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
