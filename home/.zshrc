@@ -1,18 +1,20 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
+### Homeshick ###
+export HOMESHICK_DIR=/opt/homebrew/opt/homeshick
+source "/opt/homebrew/opt/homeshick/homeshick.sh"
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+
+### ZSH Config ###
 export ZSH="/Users/niraj/.oh-my-zsh"
 ZSH_THEME="spaceship"
 HISTTIMEFORMAT="%F %T " 
 plugins=(git zsh-autosuggestions docker docker-compose flutter npm)
-
-export HOMESHICK_DIR=/opt/homebrew/opt/homeshick
-source "/opt/homebrew/opt/homeshick/homeshick.sh"
-fpath+="/opt/homebrew/share/zsh/site-functions"
-
+[ -f ~/.zsh-secrets ] && source ~/.zsh-secrets
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh-secrets
 
+### Homebrew ###
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
@@ -33,10 +35,6 @@ export PATH="$PNPM_HOME:$PATH"
 
 export FLUTTER_ROOT="/Users/niraj/fvm/default"
 
-alias nls="npm ls"
-alias ngls="npm ls --location=global"
-alias fbuild="flutter pub run build_runner build --delete-conflicting-outputs"
-alias pn=pnpm
 
 eval "$(op completion zsh)"
 compdef _op op
@@ -53,7 +51,7 @@ eval "$(github-copilot-cli alias -- "$0")"
 eval "$(starship init zsh)"
 export VISUAL="nano"
 
-# Pyenv
+### Pyenv ###
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -61,6 +59,12 @@ eval "$(pyenv init -)"
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+### Aliases ###
+alias nls="npm ls"
+alias ngls="npm ls --location=global"
+alias fbuild="flutter pub run build_runner build --delete-conflicting-outputs"
+alias pn=pnpm
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
