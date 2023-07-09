@@ -86,18 +86,12 @@ source ~/.zsh-secrets
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-if [ -f $(brew --prefix)/etc/brew-wrap ];then
-  source $(brew --prefix)/etc/brew-wrap
-
-  _post_brewfile_update () {
-    echo "Brewfile was updated!"
-  }
-fi
-
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 export NODE_ENV=development
 export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
 export PATH="/Users/niraj/fvm/default/bin:/Users/niraj/.pub-cache/bin:$PATH"
+export PATH="/Users/niraj/Library/Android/sdk/build-tools/33.0.0:$PATH"
+export PATH="/Users/niraj/Library/Android/sdk/cmdline-tools/latest/bin:$PATH"
 export PATH="/Users/niraj/Library/Android/sdk/platform-tools:$PATH"
 export PATH="/Users/niraj/Library/Android/sdk/emulator:$PATH"
 # export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
@@ -150,29 +144,21 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export GPG_TTY=$(tty)
 
 eval "$(jenv init -)"
+eval "$(rbenv init - zsh)"
 eval "$(thefuck --alias)"
-eval "$(thefuck --alias fix)" 
+eval "$(thefuck --alias fix)"
+eval "$(github-copilot-cli alias -- "$0")"
 eval "$(starship init zsh)"
 export VISUAL="nano"
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/niraj/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/niraj/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/niraj/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/niraj/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
