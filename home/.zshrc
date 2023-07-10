@@ -4,67 +4,79 @@
 ### Homeshick ###
 export HOMESHICK_DIR=/opt/homebrew/opt/homeshick
 source "/opt/homebrew/opt/homeshick/homeshick.sh"
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+
+### Homebrew ###
+eval "$(/opt/homebrew/bin/brew shellenv)"
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 ### ZSH Config ###
-export ZSH="/Users/niraj/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="spaceship"
 HISTTIMEFORMAT="%F %T " 
 plugins=(git zsh-autosuggestions docker docker-compose flutter npm)
 [ -f ~/.zsh-secrets ] && source ~/.zsh-secrets
 source $ZSH/oh-my-zsh.sh
 
-### Homebrew ###
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+### N Config ###
+export N_PREFIX="$HOME/n"
+[[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 export NODE_ENV=development
-export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
-export PATH="/Users/niraj/fvm/default/bin:/Users/niraj/.pub-cache/bin:$PATH"
-export PATH="/Users/niraj/Library/Android/sdk/build-tools/33.0.0:$PATH"
-export PATH="/Users/niraj/Library/Android/sdk/cmdline-tools/latest/bin:$PATH"
-export PATH="/Users/niraj/Library/Android/sdk/platform-tools:$PATH"
-export PATH="/Users/niraj/Library/Android/sdk/emulator:$PATH"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export PATH="$HOME/.jenv/bin:$PATH"
 
-# pnpm
-export PNPM_HOME="/Users/niraj/Library/pnpm"
+### PNPM ###
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
-export FLUTTER_ROOT="/Users/niraj/fvm/default"
-
-
-eval "$(op completion zsh)"
-compdef _op op
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export GPG_TTY=$(tty)
-
-eval "$(jenv init -)"
-eval "$(rbenv init - zsh)"
-eval "$(thefuck --alias)"
-eval "$(thefuck --alias fix)"
-eval "$(github-copilot-cli alias -- "$0")"
-eval "$(starship init zsh)"
-export VISUAL="nano"
+### Flutter/FVM ###
+export FLUTTER_ROOT="$HOME/fvm/default"
+export PATH="$HOME/fvm/default/bin:$HOME/.pub-cache/bin:$PATH"
 
 ### Pyenv ###
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+### Jenv ###
+eval "$(jenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
+
+### Rbenv ###
+eval "$(rbenv init - zsh)"
+
+### 1Password ###
+eval "$(op completion zsh)"
+compdef _op op
+
+### iTerm2 ###
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+### The Fuck ###
+eval "$(thefuck --alias)"
+eval "$(thefuck --alias fix)"
+
+### GH CoPilot CLI ###
+eval "$(github-copilot-cli alias -- "$0")"
+
+### Starship prompt ###
+eval "$(starship init zsh)"
+
+### PATH ###
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
+export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin:$PATH"
+export PATH="$HOME/Library/Android/sdk/emulator:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+
+### Shell Env Var ###
+export VISUAL="nano"
+export EDITOR="$VISUAL"
 
 ### Aliases ###
 alias nls="npm ls"
 alias ngls="npm ls --location=global"
 alias fbuild="flutter pub run build_runner build --delete-conflicting-outputs"
 alias pn=pnpm
+alias home="homeshick"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
