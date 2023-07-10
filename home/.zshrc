@@ -57,6 +57,9 @@ eval "$(thefuck --alias fix)"
 ### GH CoPilot CLI ###
 eval "$(github-copilot-cli alias -- "$0")"
 
+### Atuin ###
+eval "$(atuin init zsh)"
+
 ### Starship prompt ###
 eval "$(starship init zsh)"
 
