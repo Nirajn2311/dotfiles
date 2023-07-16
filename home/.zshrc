@@ -80,6 +80,7 @@ alias ngls="npm ls --location=global"
 alias fbuild="flutter pub run build_runner build --delete-conflicting-outputs"
 alias pn=pnpm
 alias home="homeshick"
+alias brew-update="brew update; brew upgrade; brew doctor; brew bundle dump --force --file=~/Brewfile"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
