@@ -33,7 +33,6 @@
 	rem = reset --mixed
 	rv = remote -v
 	logone = log --oneline --decorate --graph --all
-	fccbackup = !git st && git co backup && git merge main && git psfo backup && git co main && git st
 	fame = !python -m gitfame
 	cp = cherry-pick
 	cpa = cherry-pick --abort

@@ -77,7 +77,7 @@ export EDITOR="$VISUAL"
 ### Aliases ###
 alias nls="npm ls"
 alias ngls="npm ls --location=global"
-alias fbuild="flutter pub run build_runner build --delete-conflicting-outputs"
+alias fbuild="dart run build_runner build --delete-conflicting-outputs"
 alias pn=pnpm
 alias home="homeshick"
 alias brew-update="brew update; brew upgrade; brew doctor; brew bundle dump --force --file=~/Brewfile"
