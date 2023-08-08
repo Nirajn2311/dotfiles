@@ -2,25 +2,25 @@
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
 ### Homeshick ###
-export HOMESHICK_DIR=/opt/homebrew/opt/homeshick
-source "/opt/homebrew/opt/homeshick/homeshick.sh"
+export HOMESHICK_DIR=$HOME/.homesick/repos/homeshick
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
 ### Homebrew ###
 eval "$(/opt/homebrew/bin/brew shellenv)"
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
+### Node.js/NVM ###
+export NODE_ENV=development
+export NVM_AUTO_USE=true
+export NVM_COMPLETION=true
+
 ### ZSH Config ###
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="spaceship"
-HISTTIMEFORMAT="%F %T " 
-plugins=(git zsh-autosuggestions docker docker-compose flutter npm)
+HISTTIMEFORMAT="%F %T "
+plugins=(git docker docker-compose flutter npm) # Oh-my-zsh built-in plugins
+plugins+=(zsh-autosuggestions zsh-nvm zsh-better-npm-completion autoupdate) # Custom plugins
 [ -f ~/.zsh-secrets ] && source ~/.zsh-secrets
 source $ZSH/oh-my-zsh.sh
-
-### N Config ###
-export N_PREFIX="$HOME/n"
-[[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-export NODE_ENV=development
 
 ### PNPM ###
 export PNPM_HOME="$HOME/Library/pnpm"
