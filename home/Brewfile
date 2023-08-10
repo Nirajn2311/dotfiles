@@ -156,10 +156,7 @@ mas "Hidden Bar", id: 1452453066
 mas "Hotspot Shield", id: 771076721
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Remote Desktop", id: 1295203466
-mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Piccolo", id: 1561230039
@@ -226,6 +223,7 @@ vscode "PKief.material-icon-theme"
 vscode "Prisma.prisma"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.LiveServer"
+vscode "ryuta46.multi-command"
 vscode "snipsnapdev.snipsnap-vscode"
 vscode "sysoev.vscode-open-in-github"
 vscode "tomoki1207.pdf"
