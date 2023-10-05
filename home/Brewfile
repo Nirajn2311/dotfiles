@@ -149,6 +149,7 @@ mas "1Password for Safari", id: 1569813296
 mas "AdBlock", id: 1402042596
 mas "Amphetamine", id: 937984704
 mas "au.id.haroldchu.mac.Bandwidth", id: 490461369
+mas "Battery Monitor", id: 836505650
 mas "Boop", id: 1518425043
 mas "CleanMyDrive 2", id: 523620159
 mas "CotEditor", id: 1024640650
@@ -201,6 +202,8 @@ vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "mongodb.mongodb-vscode"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.autopep8"
+vscode "ms-python.black-formatter"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
@@ -228,7 +231,6 @@ vscode "Prisma.prisma"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.LiveServer"
 vscode "ryuta46.multi-command"
-vscode "snipsnapdev.snipsnap-vscode"
 vscode "sysoev.vscode-open-in-github"
 vscode "tomoki1207.pdf"
 vscode "tonybaloney.vscode-pets"
