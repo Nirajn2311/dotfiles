@@ -17,7 +17,7 @@ export NVM_COMPLETION=true
 ### ZSH Config ###
 export ZSH="$HOME/.oh-my-zsh"
 HISTTIMEFORMAT="%F %T "
-plugins=(git docker docker-compose flutter npm) # Oh-my-zsh built-in plugins
+plugins=(git docker docker-compose flutter npm wd) # Oh-my-zsh built-in plugins
 plugins+=(zsh-autosuggestions zsh-nvm zsh-better-npm-completion autoupdate) # Custom plugins
 [ -f ~/.zsh-secrets ] && source ~/.zsh-secrets
 source $ZSH/oh-my-zsh.sh
@@ -85,3 +85,7 @@ alias cat="bat"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
