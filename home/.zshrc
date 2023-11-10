@@ -10,7 +10,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 ### Node.js/NVM ###
-export NODE_ENV=development
+#export NODE_ENV=development
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 
@@ -85,7 +85,3 @@ alias cat="bat"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
