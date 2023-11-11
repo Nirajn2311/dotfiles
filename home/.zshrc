@@ -81,6 +81,7 @@ alias fbuild="dart run build_runner build --delete-conflicting-outputs"
 alias pn=pnpm
 alias home="homeshick"
 alias brew-update="brew update; brew upgrade; brew doctor; brew bundle dump --force --file=~/Brewfile"
+alias brew-cleanup-all="brew cleanup --prune=all -s"
 alias cat="bat"
 
 # Fig post block. Keep at the bottom of this file.
