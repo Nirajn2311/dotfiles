@@ -27,16 +27,18 @@ brew "curl"
 brew "sqlite"
 brew "dos2unix"
 brew "fastlane"
+brew "fd"
+brew "gcc"
 brew "unbound"
 brew "gnutls"
 brew "harfbuzz"
 brew "libass"
-brew "pango"
 brew "snappy"
+brew "pango"
 brew "srt"
 brew "tesseract"
 brew "ffmpeg"
-brew "gcc"
+brew "ffmpegthumbnailer"
 brew "gdk-pixbuf"
 brew "gh"
 brew "ghostscript"
@@ -69,20 +71,23 @@ brew "neovim"
 brew "nghttp2"
 brew "nmap"
 brew "openjdk@11"
-brew "pidgin"
+brew "poppler"
 brew "pyenv"
 brew "pyenv-pip-migrate"
 brew "pyenv-virtualenv"
 brew "rbenv"
 brew "rclone"
 brew "redis"
+brew "ripgrep"
 brew "rust"
 brew "smartmontools"
 brew "speedtest-cli"
 brew "starship"
 brew "telnet"
 brew "thefuck"
+brew "unar"
 brew "wget"
+brew "yazi"
 brew "zlib"
 brew "gitguardian/tap/ggshield"
 brew "leoafarias/fvm/fvm"
@@ -101,6 +106,7 @@ cask "betterzip"
 cask "blackhole-16ch"
 cask "blender"
 cask "cheatsheet"
+cask "codux"
 cask "db-browser-for-sqlite"
 cask "discord"
 cask "elmedia-player"
@@ -114,6 +120,7 @@ cask "gimp"
 cask "github"
 cask "google-chrome"
 cask "grandperspective"
+cask "iina"
 cask "insomnia"
 cask "iterm2"
 cask "json-viewer"
@@ -148,10 +155,11 @@ cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "AdBlock", id: 1402042596
 mas "Amphetamine", id: 937984704
-mas "au.id.haroldchu.mac.Bandwidth", id: 490461369
+mas "Bandwidth+", id: 490461369
 mas "Battery Monitor", id: 836505650
 mas "Boop", id: 1518425043
 mas "CleanMyDrive 2", id: 523620159
+mas "Codepoint", id: 6444068649
 mas "CotEditor", id: 1024640650
 mas "CrystalFetch", id: 6454431289
 mas "DevCleaner", id: 1388020431
@@ -168,6 +176,7 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Piccolo", id: 1561230039
+mas "Prime Video", id: 545519333
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
 mas "Tot", id: 1491071483
@@ -201,6 +210,7 @@ vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
 vscode "mongodb.mongodb-vscode"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-playwright.playwright"
 vscode "ms-python.autopep8"
 vscode "ms-python.black-formatter"
 vscode "ms-python.isort"
