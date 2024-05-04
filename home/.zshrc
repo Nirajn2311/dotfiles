@@ -1,6 +1,5 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
-
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 ### Homeshick ###
 export HOMESHICK_DIR=$HOME/.homesick/repos/homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
@@ -32,6 +31,10 @@ export PATH="$PNPM_HOME:$PATH"
 ### Flutter/FVM ###
 export FLUTTER_ROOT="$HOME/fvm/default"
 export PATH="$HOME/fvm/default/bin:$HOME/.pub-cache/bin:$PATH"
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/niraj/.dart-cli-completion/zsh-config.zsh ]] && . /Users/niraj/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
 
 ### Pyenv ###
 export PYENV_ROOT="$HOME/.pyenv"
@@ -39,8 +42,8 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 ### Jenv ###
-eval "$(jenv init -)"
 export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 ### Rbenv ###
 eval "$(rbenv init - zsh)"
@@ -86,5 +89,5 @@ alias brew-update="brew update; brew upgrade; brew doctor; brew bundle dump --fo
 alias brew-cleanup-all="brew cleanup --prune=all -s"
 alias cat="bat"
 
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
