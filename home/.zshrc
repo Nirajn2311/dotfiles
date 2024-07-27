@@ -36,6 +36,9 @@ export PATH="$HOME/fvm/default/bin:$HOME/.pub-cache/bin:$PATH"
 [[ -f /Users/niraj/.dart-cli-completion/zsh-config.zsh ]] && . /Users/niraj/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+### Rust ###
+export PATH="$HOME/.cargo/bin:$PATH"
+
 ### Pyenv ###
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
