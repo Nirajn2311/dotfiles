@@ -25,6 +25,12 @@ source $ZSH/oh-my-zsh.sh
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
+### Bun ###
+# bun completions
+[ -s "/Users/niraj/.oh-my-zsh/completions/_bun" ] && source "/Users/niraj/.oh-my-zsh/completions/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 ### Tabtab ###
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
