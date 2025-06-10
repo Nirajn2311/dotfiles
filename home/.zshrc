@@ -14,11 +14,21 @@ export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 
 ### ZSH Config ###
+# Set environment variables
 export ZSH="$HOME/.oh-my-zsh"
 HISTTIMEFORMAT="%F %T "
+
+# Load plugins
 plugins=(git docker docker-compose flutter npm wd) # Oh-my-zsh built-in plugins
 plugins+=(zsh-autosuggestions zsh-nvm zsh-better-npm-completion autoupdate) # Custom plugins
+
+# Load secrets
 [ -f ~/.zsh-secrets ] && source ~/.zsh-secrets
+
+# Auto update without prompt
+zstyle ':omz:update' mode auto
+
+# Load OMZ
 source $ZSH/oh-my-zsh.sh
 
 ### PNPM ###
