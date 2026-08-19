@@ -1,5 +1,3 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 ### Homeshick ###
 export HOMESHICK_DIR=$HOME/.homesick/repos/homeshick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
@@ -35,12 +33,6 @@ source $ZSH/oh-my-zsh.sh
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
-### Bun ###
-# bun completions
-[ -s "/Users/niraj/.oh-my-zsh/completions/_bun" ] && source "/Users/niraj/.oh-my-zsh/completions/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 ### Tabtab ###
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
@@ -53,23 +45,19 @@ export PATH="$HOME/fvm/default/bin:$HOME/.pub-cache/bin:$PATH"
 ## [/Completion]
 
 ### Rust ###
-export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
 
 ### Pyenv ###
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 ### Jenv ###
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
 
 ### Rbenv ###
-eval "$(rbenv init - zsh)"
-
-### 1Password ###
-eval "$(op completion zsh)"
-compdef _op op
+# eval "$(rbenv init - zsh)"
 
 ### iTerm2 ###
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -77,9 +65,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ### The Fuck ###
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias fix)"
-
-### GH CoPilot CLI ###
-eval "$(github-copilot-cli alias -- "$0")"
 
 ### Atuin ###
 eval "$(atuin init zsh --disable-up-arrow)"
@@ -107,6 +92,3 @@ alias home="homeshick"
 alias brew-update="brew update; brew upgrade; brew doctor; brew bundle dump --force --file=~/Brewfile"
 alias brew-cleanup-all="brew cleanup --prune=all -s"
 alias cat="bat"
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

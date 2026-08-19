@@ -1,210 +1,240 @@
-tap "1password/tap"
-tap "buo/cask-upgrade"
-tap "dart-lang/dart"
-tap "gitguardian/tap"
-tap "homebrew/bundle"
-tap "homebrew/services"
-tap "jesseduffield/lazygit"
-tap "leoafarias/fvm"
-tap "mongodb/brew"
-tap "nextfire/tap"
-tap "wix/brew"
-brew "act"
-brew "xz"
-brew "jpeg-xl"
+tap "edde746/plezy", "https://github.com/edde746/plezy", trusted: true
+tap "jaxxstorm/tap", trusted: true
+tap "leoafarias/fvm", trusted: true
+tap "mongodb/brew", trusted: true
+tap "wix-incubator/brew", "https://github.com/wix-incubator/homebrew-brew.git", trusted: true
+# Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
-brew "automake"
+# Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-brew "readline"
-brew "glib"
-brew "cairo"
-brew "cloc"
-brew "cmake"
-brew "cocoapods"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
-brew "dos2unix"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
-brew "fastlane"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
-brew "unbound"
-brew "gnutls"
-brew "harfbuzz"
-brew "libass"
-brew "pango"
-brew "snappy"
-brew "srt"
-brew "tesseract"
-brew "ffmpeg"
-brew "ffmpegthumbnailer"
-brew "gcc"
-brew "gdk-pixbuf"
+# Manage Flutter SDK versions per project
+brew "fvm"
+# Scanner for secrets and sensitive data in code
+brew "ggshield"
+# GitHub command-line tool
 brew "gh"
-brew "ghostscript"
+# Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Tcl/Tk UI for the git revision control system
 brew "git-gui"
-brew "pkgconf"
-brew "gobject-introspection"
-brew "librsvg"
-brew "libtool"
-brew "graphviz"
-brew "guile"
-brew "hashcat"
+# Core application library for C
+brew "glib"
+# Improved top (interactive process viewer)
 brew "htop"
-brew "httpie", link: false
-brew "id3v2"
-brew "libheif"
-brew "libomp", link: true
-brew "imagemagick"
-brew "jenv"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
-brew "libpq"
-brew "llvm"
-brew "mailhog"
+# Mac App Store command-line interface
 brew "mas"
+# Unified display of technical and tag data for audio/video
+brew "media-info"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
-brew "mp3val"
-brew "yt-dlp"
-brew "mpv"
+# 'traceroute' and 'ping' in a single tool
 brew "mtr"
+# NCurses Disk Usage
 brew "ncdu"
-brew "neofetch"
-brew "neovim"
-brew "nghttp2"
-brew "nmap"
-brew "openjdk@17"
-brew "openldap"
-brew "poppler"
-brew "pyenv"
-brew "pyenv-pip-migrate"
-brew "pyenv-virtualenv"
-brew "rbenv"
+# Rsync for cloud storage
 brew "rclone"
-brew "redis"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
-brew "rust"
+# SMART hard drive monitoring
 brew "smartmontools"
-brew "speedtest-cli"
+# Cross-shell prompt for astronauts
 brew "starship"
-brew "tcl-tk"
+# User interface to the TELNET protocol
 brew "telnet"
+# Programmatically correct mistyped console commands
 brew "thefuck"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
-brew "unar"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
 brew "wget"
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
-brew "zlib"
-brew "gitguardian/tap/ggshield"
-brew "jesseduffield/lazygit/lazygit"
-brew "leoafarias/fvm/fvm"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# A CLI tool to detect NAT type.
+brew "jaxxstorm/tap/stunner"
+# This package contains standard utilities for interacting with MongoDB.
 brew "mongodb/brew/mongodb-database-tools"
+# High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
-brew "nextfire/tap/apple-music-discord-rpc"
-brew "wix/brew/applesimutils"
+# Apple simulator utilities
+brew "wix-incubator/brew/applesimutils"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
-cask "1password-cli"
-cask "amazon-q"
+# View, print, and comment on PDF documents
+cask "adobe-acrobat-reader"
+# Transfer files from and to an Android smartphone
 cask "android-file-transfer"
+# Tools for building Android applications
 cask "android-studio"
+# Application uninstaller
 cask "appcleaner"
+# Chromium based browser
 cask "arc"
+# Runbook editor for terminal workflows
+cask "atuin-desktop"
 cask "authy"
+# Utility to create and modify archives
 cask "betterzip"
+# Virtual Audio Driver
 cask "blackhole-16ch"
-cask "blender"
-cask "cheatsheet"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Browser for SQLite databases
 cask "db-browser-for-sqlite"
+# Voice and text chat software
 cask "discord"
-cask "elmedia-player"
-cask "figma"
+# Developer platform
+cask "dotnet-sdk"
+# Web browser
 cask "firefox"
-cask "flux"
+# Screen colour temperature controller
+cask "flux-app"
 cask "font-fira-code-nerd-font"
+# Download accelerator and organiser
 cask "free-download-manager"
-cask "gimp"
-cask "github"
+# GitHub notifications on your menu bar
+cask "gitify"
+# Web browser
 cask "google-chrome"
+# Graphically shows disk usage within a file system
 cask "grandperspective"
-cask "httpie"
+# Free and open-source media player
 cask "iina"
-cask "insomnia"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-cask "jordanbaird-ice"
+# Enables an integrated web browser in iTerm2
+cask "itermbrowserplugin"
+# App to visualise, validate and format JSON datasets
 cask "json-viewer"
+# Keyboard customiser
 cask "karabiner-elements"
+# Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
+# Backup/restore tool
+cask "kopiaui"
+# Software for Logitech devices
+cask "logi-options+"
+# Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
-cask "microsoft-edge"
+# Display technical and tag data for video and audio files
+cask "mediainfo"
+# GUI including a set of tools to create, alter and inspect Matroska files (MKV)
+cask "mkvtoolnix-app"
+# Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
-cask "multiviewer-for-f1"
-cask "musicbrainz-picard"
+# VPN client
+cask "mullvad-vpn"
+# Unofficial desktop client for F1 TV
+cask "multiviewer"
+# Discord music status that works with any media player
+cask "music-presence"
+# Desktop sync client for Nextcloud software products
 cask "nextcloud"
-cask "ngrok"
+# Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Finds large, unwanted files and deletes them
 cask "omnidisksweeper"
+# Verify system files structure, run miscellaneous maintenance and more
+cask "onyx"
+# Client program for the OpenVPN Access Server
 cask "openvpn-connect"
+# Replacement for Docker Desktop
 cask "orbstack"
+# Home media player
+cask "plex"
+# Home media server
+cask "plex-media-server"
+# Modern Plex and Jellyfin client built with Flutter
+cask "edde746/plezy/plezy"
+# Peer to peer Bitorrent client
+cask "qbittorrent"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Modified browser that helps in responsive web development
 cask "responsively"
-cask "signal"
-cask "tailscale"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
+# Remote access and connectivity software focused on security
 cask "teamviewer"
-cask "telegram"
-cask "tunnelblick"
+# Menu bar manager
+cask "thaw"
+# PKG software package uninstall tool
 cask "uninstallpkg"
-cask "utm"
+# Open-source code editor
 cask "visual-studio-code"
-cask "vlc"
-cask "webex"
-cask "whisky"
-cask "zed"
+# Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "AdBlock", id: 1402042596
 mas "Amphetamine", id: 937984704
 mas "Bandwidth+", id: 490461369
-mas "CleanMyDrive 2", id: 523620159
 mas "Codepoint", id: 6444068649
 mas "CotEditor", id: 1024640650
-mas "CrystalFetch", id: 6454431289
 mas "DevCleaner", id: 1388020431
 mas "Developer", id: 640199958
 mas "Flighty", id: 1358823008
 mas "GarageBand", id: 682658836
-mas "Gemini 2", id: 1090488118
-mas "Gifski", id: 1351639930
 mas "Hex Fiend", id: 1342896380
 mas "Hidden Bar", id: 1452453066
-mas "Hotspot Shield", id: 771076721
 mas "iMovie", id: 408981434
+mas "Infuse", id: 1136220934
+mas "Keynote", id: 361285480
 mas "Keynote", id: 409183694
-mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 361304891
 mas "Numbers", id: 409203825
+mas "Pages", id: 361309726
 mas "Pages", id: 409201541
 mas "Piccolo", id: 1561230039
+mas "Pixelmator Pro", id: 6746662575
 mas "Prime Video", id: 545519333
-mas "RemoteDrive", id: 6502180430
+mas "Sleeve", id: 1606145041
 mas "Spark", id: 1176895641
+mas "Spark Desktop", id: 6445813049
 mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
 mas "Tot", id: 1491071483
 mas "Transporter", id: 1450874784
-mas "Twitter", id: 1482454543
+mas "WhatsApp", id: 310633997
+mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
-mas "‎WhatsApp", id: 310633997
+vscode "aaron-bond.better-comments"
 vscode "alefragnani.project-manager"
 vscode "alexcvzz.vscode-sqlite"
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
-vscode "blaugold.melos-code"
+vscode "anthropic.claude-code"
 vscode "codezombiech.gitignore"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
 vscode "dbaeumer.vscode-eslint"
+vscode "docker.docker"
 vscode "dotjoshjohnson.xml"
 vscode "dracula-theme.theme-dracula"
 vscode "eamodio.gitlens"
@@ -214,18 +244,20 @@ vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
-vscode "gitpod.gitpod-desktop"
+vscode "gplane.dprint2"
 vscode "gruntfuggly.todo-tree"
-vscode "icrawl.discord-vscode"
+vscode "hangxingliu.vscode-systemd-support"
 vscode "iliazeus.vscode-ansi"
+vscode "k--kato.docomment"
+vscode "mads-hartmann.bash-ide-vscode"
 vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
-vscode "mongodb.mongodb-vscode"
-vscode "ms-azuretools.vscode-docker"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-dotnettools.csdevkit"
+vscode "ms-dotnettools.csharp"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-playwright.playwright"
 vscode "ms-python.autopep8"
 vscode "ms-python.black-formatter"
@@ -233,6 +265,7 @@ vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
@@ -251,19 +284,30 @@ vscode "mtxr.sqltools-driver-mysql"
 vscode "mtxr.sqltools-driver-pg"
 vscode "mtxr.sqltools-driver-sqlite"
 vscode "orta.vscode-jest"
+vscode "oxc.oxc-vscode"
 vscode "patricklee.vsnotes"
 vscode "pflannery.vscode-versionlens"
 vscode "pkief.material-icon-theme"
 vscode "prisma.prisma"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.liveserver"
+vscode "robert-brunhage.flutter-riverpod-snippets"
 vscode "rust-lang.rust-analyzer"
 vscode "ryuta46.multi-command"
 vscode "sysoev.vscode-open-in-github"
-vscode "tauri-apps.tauri-vscode"
 vscode "tomoki1207.pdf"
 vscode "tonybaloney.vscode-pets"
 vscode "usernamehw.errorlens"
 vscode "vscjava.vscode-gradle"
 vscode "wayou.vscode-todo-highlight"
 vscode "yoavbls.pretty-ts-errors"
+vscode "yzhang.markdown-all-in-one"
+npm "corepack"
+npm "firebase-tools"
+npm "nodemon"
+npm "npkill"
+npm "pnpm"
+npm "serve"
+npm "ts-node"
+npm "typescript"
+npm "yarn"
