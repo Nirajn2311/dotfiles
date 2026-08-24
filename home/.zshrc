@@ -48,9 +48,9 @@ export PATH="$HOME/fvm/default/bin:$HOME/.pub-cache/bin:$PATH"
 # export PATH="$HOME/.cargo/bin:$PATH"
 
 ### Pyenv ###
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 ### Jenv ###
 # export PATH="$HOME/.jenv/bin:$PATH"
@@ -71,6 +71,9 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 ### Starship prompt ###
 eval "$(starship init zsh)"
+
+### Java ###
+export GRADLE_DAEMON_IDLE_TIMEOUT_MS=60000
 
 ### PATH ###
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
