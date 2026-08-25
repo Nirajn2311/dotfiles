@@ -9,6 +9,8 @@ brew "atuin"
 brew "openssl@3"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Core application library for C
+brew "glib"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # General-purpose data compression with high compression ratio
@@ -19,6 +21,8 @@ brew "exiftool"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream many audio and video codecs
+brew "ffmpeg-full", link: true
 # Manage Flutter SDK versions per project
 brew "fvm"
 # Scanner for secrets and sensitive data in code
@@ -31,8 +35,6 @@ brew "git"
 brew "git-delta"
 # Tcl/Tk UI for the git revision control system
 brew "git-gui"
-# Core application library for C
-brew "glib"
 # Improved top (interactive process viewer)
 brew "htop"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
@@ -47,6 +49,10 @@ brew "media-info"
 brew "node"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Media player based on MPlayer and mplayer2
+brew "mpv"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # NCurses Disk Usage
@@ -73,8 +79,6 @@ brew "watch"
 brew "wget"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
-# Feature-rich command-line audio/video downloader
-brew "yt-dlp"
 # A CLI tool to detect NAT type.
 brew "jaxxstorm/tap/stunner", trusted: true
 # This package contains standard utilities for interacting with MongoDB.
@@ -85,8 +89,6 @@ brew "mongodb/brew/mongodb-community", trusted: true
 brew "wix-incubator/brew/applesimutils", trusted: true
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# View, print, and comment on PDF documents
-cask "adobe-acrobat-reader"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer"
 # Tools for building Android applications
@@ -99,8 +101,6 @@ cask "arc"
 cask "atuin-desktop"
 # Utility to create and modify archives
 cask "betterzip"
-# Virtual Audio Driver
-cask "blackhole-16ch"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Terminal-based AI coding assistant
@@ -289,7 +289,6 @@ vscode "yzhang.markdown-all-in-one"
 npm "corepack"
 npm "nodemon"
 npm "npkill"
-npm "pnpm"
 npm "serve"
 npm "ts-node"
 npm "typescript"
